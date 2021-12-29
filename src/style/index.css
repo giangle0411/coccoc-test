@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.App {
+  font-family: 'Poppins', sans-serif;;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  width: 1110px;
+}
+
+.nav-bar {
+  height: 90px;
+}
+
+.header {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E3F0EE 67.14%);
+  height: 161px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.title {
+  position: absolute;
+  height: 27px;
+  left: calc(50% - 139px/2 - 485.5px);
+  top: 138px;
+}
+
+.cc-logo {
+  margin: 25px 0px 25px 0px;
+}
+
+body {
+  margin: 0;
+}
+

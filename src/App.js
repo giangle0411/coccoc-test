@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import NavBar from "./components/NavBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NhanQuaTang from "./pages/NhanQuaTang";
+import NhanDiemThuong from "./pages/NhanDiemThuong";
+import XepHang from "./pages/XepHang";
+import CauHoiThuongGap from "./pages/CauHoiThuongGap";
+import QuanLyTaiKhoan from "./pages/QuanLyTaiKhoan";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <NavBar />
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" exact element={<NhanQuaTang />} />
+            <Route
+              path="/nhan-diem-thuong"
+              exact
+              element={<NhanDiemThuong />}
+            />
+            <Route path="/xep-hang" exact element={<XepHang />} />
+            <Route
+              path="/cau-hoi-thuong-gap"
+              exact
+              element={<CauHoiThuongGap />}
+            />
+            <Route
+              path="/quan-ly-tai-khoan"
+              exact
+              element={<QuanLyTaiKhoan />}
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
 
 export default App;
