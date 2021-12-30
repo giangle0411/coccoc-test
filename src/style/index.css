@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* General App Styling */
+
 .App {
   font-family: 'Poppins', sans-serif;;
+}
+
+body {
+  margin: 0;
 }
 
 .content-wrapper {
@@ -9,9 +15,67 @@
   width: 1110px;
 }
 
+.cc-point-logo {
+  width: 12px;
+}
+
+.coccoc-point {
+  display: flex;
+  color: #F48120;
+}
+
+/* Nav bar styling */
+
 .nav-bar {
   height: 90px;
 }
+
+.nav-bar a:active {
+  color: green;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-item {
+  margin: 0px 0px 0px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #6E7171;
+}
+
+.cc-logo {
+  margin: 25px 0px 25px 0px;
+}
+
+.nav-user-block {
+  display: flex;
+  align-items: center;
+  color: #6E7171;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0px 2px 0px 2px;
+  text-decoration: none;
+  color: #6E7171;
+}
+
+.user-avatar {
+  margin-left: 24px;
+  height: 24px;
+}
+/* Page header */
 
 .header {
   background: linear-gradient(180deg, #FFFFFF 0%, #E3F0EE 67.14%);
@@ -31,11 +95,4 @@
   top: 138px;
 }
 
-.cc-logo {
-  margin: 25px 0px 25px 0px;
-}
-
-body {
-  margin: 0;
-}
-
+/* Page Tab styling */

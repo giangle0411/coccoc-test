@@ -12,9 +12,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
-
         <BrowserRouter>
+          <NavBar />
           <Routes>
             <Route path="/" exact element={<NhanQuaTang />} />
             <Route
