@@ -14,6 +14,10 @@ export default class Footer extends Component {
         <div className="content-wrapper">
           <div className="footer-logos">
             <img src={coccocLogo} alt="logo" className="cc-logo-footer"></img>
+            <div className="footer-links-mobile">
+              <a href="/">Điều khoản sử dụng</a>
+              <a href="/">Chính sách bảo mật</a>
+            </div>
             <div className="social-logos">
               <a href="https://www.facebook.com/">
                 <img

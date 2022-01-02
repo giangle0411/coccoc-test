@@ -6,11 +6,13 @@ export default class GiftCard extends Component {
   render() {
     return (
       <div className="gift-card">
-        <img
-          src={this.props.imageUrl}
-          alt="gift-img"
-          className="gift-img"
-        ></img>
+        <div className="gift-img-container">
+          <img
+            src={this.props.imageUrl}
+            alt="gift-img"
+            className="gift-img"
+          ></img>
+        </div>
         <div className="gift-content">
           <div className="gift-name">{this.props.name}</div>
           <div className="gift-duration">

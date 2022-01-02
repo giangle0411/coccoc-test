@@ -69,3 +69,35 @@ margin-bottom: 4px;
   background-color: #F16037;
   color: #FFFFFF;
 }
+
+@media (max-width: 1110px) {
+  .gift-card-list {
+    justify-content: space-around;
+  }
+
+  .gift-img {
+    width: 343px;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+  }
+
+  .gift-img-container {
+    position: relative;
+    overflow: hidden;
+    width: 343px;
+    height: 143px;
+  }
+
+  .gift-card {
+    height: 300px;
+    width: 343px;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+}

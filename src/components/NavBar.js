@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import coccocLogo from "../assets/CC Logo Points.png";
 import userAvatar from "../assets/Avatar.png";
 import NavUserBlock from "./NavUserBlock";
+import mobileNavIcon from "../assets/ic_bars.png";
 
 export default class NavBar extends Component {
   render() {
@@ -14,6 +15,11 @@ export default class NavBar extends Component {
             <div className="logo">
               <img src={coccocLogo} alt="logo" className="cc-logo"></img>
             </div>
+            <img
+              src={mobileNavIcon}
+              alt="mobile-nav-icon"
+              className="mobile-nav-icon"
+            />
             <div className="nav-items">
               <NavLink
                 to="/"

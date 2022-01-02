@@ -46,3 +46,26 @@
   margin-left: 24px;
   height: 24px;
 }
+
+@media (max-width: 375px) {
+  .nav-bar {
+    height: 56px;
+  }
+
+  .cc-logo {
+    height: 24px;
+    margin: 16px 0px 16px 0px;
+  }
+  
+
+
+  .nav-content {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-items {
+    display: none;
+  }
+}

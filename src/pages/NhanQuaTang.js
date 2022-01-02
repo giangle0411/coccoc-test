@@ -9,7 +9,12 @@ export default function NhanQuaTang() {
   const [selectedTab, setSelectedTab] = useState(1);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [giftsPerPage] = useState(20);
+  const [giftsPerPage, setGiftPerPage] = useState(20);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1110);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1450);
+  };
 
   useEffect(() => {
     const fetchGifts = async () => {
@@ -20,6 +25,11 @@ export default function NhanQuaTang() {
     };
 
     fetchGifts();
+    if (isDesktop) {
+      setGiftPerPage(20);
+    } else setGiftPerPage(8);
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
   }, []);
 
   const setTab = (index) => {
