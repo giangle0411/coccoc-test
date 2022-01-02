@@ -7,6 +7,7 @@ import NhanDiemThuong from "./pages/NhanDiemThuong";
 import XepHang from "./pages/XepHang";
 import CauHoiThuongGap from "./pages/CauHoiThuongGap";
 import QuanLyTaiKhoan from "./pages/QuanLyTaiKhoan";
+import Footer from "./components/Footer";
 
 class App extends Component {
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
               element={<QuanLyTaiKhoan />}
             />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     );

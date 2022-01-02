@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../style/nav.css";
 import { NavLink } from "react-router-dom";
 import coccocLogo from "../assets/CC Logo Points.png";
 import userAvatar from "../assets/Avatar.png";

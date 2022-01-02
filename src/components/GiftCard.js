@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CoccocPoint from "./CoccocPoint";
 import DoiQuaBtn from "./DoiQuaBtn";
+import "../style/giftCard.css";
 export default class GiftCard extends Component {
   render() {
     return (
