@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.page-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 17px;
+}
+
+.active-page {
+  color: #FFFFFF;
+  background-color: #F16037;
+}
+
+.back-next-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
