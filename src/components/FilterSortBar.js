@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import checkboxBlank from "../assets/check_box_outline_blank.png";
 import checkbox from "../assets/check_box.png";
 import "../style/filterSortBar.css";
+import DropDown from "./DropDown";
 
 export default function FilterSortBar() {
   const [options] = useState([
@@ -11,6 +12,11 @@ export default function FilterSortBar() {
     "Qua tang",
   ]);
   const [selectedOption, setSelectedOption] = useState("Tat ca");
+  const [sortOptions] = useState([
+    "Sắp xếp theo: Phổ biến",
+    "Option 1",
+    "Option 2",
+  ]);
 
   const setOption = (option) => {
     setSelectedOption(options[option]);
@@ -71,6 +77,7 @@ export default function FilterSortBar() {
           Quà tặng
         </label>
       </div>
+      <DropDown options={sortOptions} />
     </div>
   );
 }
