@@ -1,0 +1,46 @@
+
+.filter-sort-bar {
+  width: 1110px;
+  height: 53px;
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox {
+  width: 12px;
+  margin-right: 6px ;
+}
+
+.filter-item {
+  margin-right: 26px;
+  display: flex;
+  align-items:  center; 
+  cursor: pointer;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.check-box, .check-box-blank {
+  width: 12px;
+  margin-right: 6px;
+}
+
+.active-item {
+  color: #4FBA69;
+}
+
+.active-item .check-box {
+  display: block;
+}
+
+.active-item .check-box-blank {
+  display: none;
+}
+
+.check-box {
+  display: none;
+}

@@ -109,27 +109,3 @@ body {
 
 
 /* Filter sort bar */
-
-.filter-sort-bar {
-  width: 1110px;
-  height: 53px;
-  margin-top: 36px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.checkbox {
-  width: 12px;
-  margin-right: 6px ;
-}
-
-.filter-item {
-  margin-right: 26px;
-  display: flex;
-  align-items:  center; 
-}
-
-.filter-container {
-  display: flex;
-  align-items: center;
-}

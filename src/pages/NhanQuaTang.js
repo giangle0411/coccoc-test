@@ -5,7 +5,6 @@ import GiftCard from "../components/GiftCard";
 import Pagination from "../components/Pagination";
 
 export default function NhanQuaTang() {
-  // state = { gifts: [], selectedTab: 1 };
   const [gifts, setGifts] = useState([]);
   const [selectedTab, setSelectedTab] = useState(1);
   const [loading, setLoading] = useState(false);
