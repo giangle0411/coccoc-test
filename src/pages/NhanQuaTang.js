@@ -4,12 +4,15 @@ import FilterSortBar from "../components/FilterSortBar";
 import GiftCard from "../components/GiftCard";
 
 export default class NhanQuaTang extends Component {
-  state = { gifts: [] };
+  state = { gifts: [], selectedTab: 1 };
+
+  setTab = (index) => {
+    this.setState({ selectedTab: index });
+  };
 
   fetchGifts = async () => {
     const response = await api.get();
     this.setState({ gifts: response.data });
-    console.log(response.data);
   };
 
   componentDidMount() {
@@ -38,20 +41,6 @@ export default class NhanQuaTang extends Component {
           activeTimeTo={this.date(gift.activeTimeTo)}
           requiredPoints={gift.requiredPoints}
         />
-        // <div className="gift-card" key={index}>
-        //   <img src={gift.imageUrl} alt="gift-img" className="gift-img"></img>
-        //   <div className="gift-content">
-        //     <div className="gift-name">{gift.name}</div>
-        //     <div className="gift-duration">
-        //       Hiệu lực: {this.date(gift.activeTimeFrom)} -{" "}
-        //       {this.date(gift.activeTimeTo)}
-        //     </div>
-        //     <CoccocPoint point={gift.requiredPoints} />
-        //     <div className="gift-btn-container">
-        //       <DoiQuaBtn />
-        //     </div>
-        //   </div>
-        // </div>
       );
     });
   }
@@ -65,8 +54,43 @@ export default class NhanQuaTang extends Component {
           </div>
         </div>
         <div className="content-wrapper">
-          <FilterSortBar />
-          <div className="gift-card-list">{this.renderGiftsList()}</div>
+          <div className="tabs-container">
+            <div className="bloc-tabs">
+              <button
+                className={
+                  this.state.selectedTab === 1 ? "tabs active-tabs" : "tabs"
+                }
+                onClick={() => this.setTab(1)}
+              >
+                Đổi quà tặng
+              </button>
+              <button
+                className={
+                  this.state.selectedTab === 2 ? "tabs active-tabs" : "tabs"
+                }
+                onClick={() => this.setTab(2)}
+              >
+                Vòng quay may mắn
+              </button>
+            </div>
+            <div className="content-tabs">
+              <div
+                className={
+                  this.state.selectedTab === 1 ? "active-content" : "content"
+                }
+              >
+                <FilterSortBar />
+                <div className="gift-card-list">{this.renderGiftsList()}</div>
+              </div>
+            </div>
+            <div
+              className={
+                this.state.selectedTab === 2 ? "active-content" : "content"
+              }
+            >
+              Vòng quay may mắn
+            </div>
+          </div>
         </div>
       </div>
     );
